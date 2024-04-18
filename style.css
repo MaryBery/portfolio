@@ -1,0 +1,84 @@
+html {
+    font-size: 22px
+}
+
+body {
+    display: grid;
+    grid-template-areas: "header nav"
+                         "aboutMe pic"
+                         "projects pic"
+                         "skills pic";
+    grid-template-columns: 4fr 3fr;
+    margin-top: 0;
+}
+
+header {
+    grid-area: header;
+    padding: 0 15px;
+    margin-left: -15px;
+    width: 100%;
+    height: 5rem;
+    position: fixed;
+    background-color: white;
+    border-bottom: 2px solid black;
+}
+
+h1 {
+    display: inline;
+    float: left;
+}
+
+nav {
+    grid-area: nav;
+    display: inline;
+    float: right;
+    margin: 15px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 20px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 7px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#pic {
+    grid-area: pic;
+    display: grid;
+}
+
+#pic img {
+    width: 50%;
+    margin-top: 25%;
+    justify-self: center;
+}
+
+
+
+#aboutMe {
+    grid-area: aboutMe;
+    margin-top: 15%;
+}
+
+#projects {
+    grid-area: projects;
+
+}
+
+#skills {
+    grid-area: skills;
+}
+
+#skills ul li {
+    display: inline;
+}
+
+#skills ul li img {
+    height: 50px;
+}
