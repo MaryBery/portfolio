@@ -1,21 +1,29 @@
-html {
-    font-size: 22px
+@media only screen and (min-width: 871px) {
+    html {
+        font-size: 22px;
+    }
+    body {
+        display: grid;
+        grid-template-areas: "header nav"
+                             "aboutMe pic"
+                             "projects pic"
+                             "skills pic";
+        grid-template-columns: 4fr 3fr;
+        margin-top: 1rem;
+    }
 }
 
-body {
-    display: grid;
-    grid-template-areas: "header nav"
-                         "aboutMe pic"
-                         "projects pic"
-                         "skills pic";
-    grid-template-columns: 4fr 3fr;
-    margin-top: 0;
+@media only screen and (max-width: 870px) {
+    html {
+        font-size: 16px;
+    }
 }
+
 
 header {
     grid-area: header;
-    padding: 0 15px;
-    margin-left: -15px;
+    padding: 0 0.68rem;
+    margin-left: -0.68rem;
     width: 100%;
     height: 5rem;
     position: fixed;
@@ -32,15 +40,15 @@ nav {
     grid-area: nav;
     display: inline;
     float: right;
-    margin: 15px;
+    margin: 0.68rem;
 }
 
 nav ul li {
     display: inline;
-    margin: 20px;
-    padding: 10px;
+    margin: 0.91rem;
+    padding: 0.45rem;
     border: 2px solid black;
-    border-radius: 7px;
+    border-radius: 0.32pem;
 }
 
 a {
@@ -80,5 +88,5 @@ a {
 }
 
 #skills ul li img {
-    height: 50px;
+    height: 2.27rem;
 }
