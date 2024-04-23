@@ -2,20 +2,56 @@
     html {
         font-size: 22px;
     }
-    body {
-        display: grid;
-        grid-template-areas: "header nav"
-                             "aboutMe pic"
-                             "projects pic"
-                             "skills pic";
-        grid-template-columns: 4fr 3fr;
-        margin-top: 1rem;
-    }
 }
 
 @media only screen and (max-width: 870px) {
     html {
         font-size: 16px;
+    }
+}
+
+body {
+    display: grid;
+    grid-template-areas: "header header"
+                         "aboutMe pic"
+                         "projects pic"
+                         "skills pic";
+    grid-template-columns: 4fr 3fr;
+}
+
+@media only screen and (min-width: 648px) {
+    #smallNav {
+        display: none;
+    }
+    nav ul li {
+        display: inline;
+        margin: 0.91rem;
+        padding: 0.45rem;
+        border: 2px solid black;
+        border-radius: 0.32pem;
+    }
+        
+}
+
+@media only screen and (max-width: 647px) {
+    nav ul {
+        display: none;
+    }
+    
+    #smallNav {
+        grid-area: nav;
+        width: 20px;
+        height: 20px;
+        display: inline;
+        float: right;
+        margin-right: 30px;
+        background-color:silver;
+        border: 2px solid black;
+        border-radius: 5px;
+    }
+
+    #smallNav ul {
+        display: none;
     }
 }
 
@@ -41,14 +77,6 @@ nav {
     display: inline;
     float: right;
     margin: 0.68rem;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0.91rem;
-    padding: 0.45rem;
-    border: 2px solid black;
-    border-radius: 0.32pem;
 }
 
 a {
